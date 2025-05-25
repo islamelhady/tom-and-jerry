@@ -23,41 +23,39 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 @Composable
-fun AddToCartBottomBar() {
-    Surface(shadowElevation = 8.dp) {
-        Row(
+fun AddToCartBottomBar(onAddToCartClick: () -> Unit) {
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .background(Color.White)
+            .padding(16.dp),
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.spacedBy(16.dp)
+    ) {
+        Button(
+            onClick = onAddToCartClick,
             modifier = Modifier
-                .fillMaxWidth()
-                .background(Color.White)
-                .padding(16.dp),
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(16.dp)
+                .weight(1f)
+                .height(52.dp),
+            shape = RoundedCornerShape(12.dp),
+            colors = ButtonDefaults.buttonColors(containerColor = Color(color = 0xFF03578A))
         ) {
-            Button(
-                onClick = {},
-                modifier = Modifier
-                    .weight(1f)
-                    .height(52.dp),
-                shape = RoundedCornerShape(12.dp),
-                colors = ButtonDefaults.buttonColors(containerColor = Color(color = 0xFF03578A))
-            ) {
-                Text(text = "Add to cart", fontSize = 16.sp)
-            }
-            Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                Text(text = "3 cheeses", fontSize = 14.sp, fontWeight = FontWeight.Bold)
-                Text(
-                    text = "5 cheeses",
-                    fontSize = 12.sp,
-                    color = Color.Gray,
-                    textDecoration = TextDecoration.LineThrough
-                )
-            }
+            Text(text = "Add to cart", fontSize = 16.sp)
+        }
+        Column(horizontalAlignment = Alignment.CenterHorizontally) {
+            Text(text = "3 cheeses", fontSize = 14.sp, fontWeight = FontWeight.Bold)
+            Text(
+                text = "5 cheeses",
+                fontSize = 12.sp,
+                color = Color.Gray,
+                textDecoration = TextDecoration.LineThrough
+            )
         }
     }
 }
 
-@Preview(showBackground = true)
+@Preview(showBackground = false)
 @Composable
-fun AddToCartBottomBarPreview(){
-    AddToCartBottomBar()
+fun AddToCartBottomBarPreview() {
+    AddToCartBottomBar(onAddToCartClick = {})
 }
