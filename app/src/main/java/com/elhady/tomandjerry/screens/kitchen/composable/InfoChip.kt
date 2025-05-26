@@ -17,7 +17,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.elhady.tomandjerry.R
-import com.elhady.tomandjerry.composable.ibmPlexSansArabic
+import com.elhady.tomandjerry.screens.store.composable.ibmPlexSansArabic
 
 @Composable
 fun InfoChip(
