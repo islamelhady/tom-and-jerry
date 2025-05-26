@@ -20,8 +20,10 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.elhady.tomandjerry.R
 import com.elhady.tomandjerry.data.CharacterInfo
 
 @Composable
@@ -72,4 +74,17 @@ fun CharacterCard(character: CharacterInfo) {
             modifier = Modifier.size(64.dp)
         )
     }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun CharacterCardPreview() {
+    CharacterCard(
+        character = CharacterInfo(
+            name = "Tom",
+            description = "Failed stalker",
+            imageRes = R.drawable.tom_promo,
+            backgroundColor = Color(0xFFFCF2C5)
+        )
+    )
 }

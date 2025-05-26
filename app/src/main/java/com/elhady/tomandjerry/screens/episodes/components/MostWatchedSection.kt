@@ -12,6 +12,7 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.elhady.tomandjerry.R
 import com.elhady.tomandjerry.data.EpisodeInfo
@@ -19,8 +20,8 @@ import com.elhady.tomandjerry.data.EpisodeInfo
 @Composable
 fun MostWatchedSection() {
     val episodes = listOf(
-        EpisodeInfo(stringResource(R.string.number_404_the_cursed_cheese), R.drawable.episode_card),
-        EpisodeInfo(stringResource(R.string.chase_on_the_moon), R.drawable.episode_card2)
+        EpisodeInfo(stringResource(R.string.number_404_the_cursed_cheese), R.drawable.episode_card2),
+        EpisodeInfo(stringResource(R.string.chase_on_the_moon), R.drawable.episode_card)
     )
 
     Column(
@@ -42,4 +43,10 @@ fun MostWatchedSection() {
             }
         }
     }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun MostWatchedSectionPreview(){
+    MostWatchedSection()
 }

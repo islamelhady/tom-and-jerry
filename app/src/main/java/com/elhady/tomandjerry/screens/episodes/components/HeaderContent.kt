@@ -17,6 +17,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.elhady.tomandjerry.R
@@ -57,7 +58,7 @@ fun HeaderContent() {
         Spacer(modifier = Modifier.weight(1f))
 
         Image(
-            painter = painterResource(id = R.drawable.tom_and_jerry),
+            painter = painterResource(id = R.drawable.tom_promo),
             contentDescription = "Tom and Jerry",
             modifier = Modifier
                 .width(112.dp)
@@ -66,4 +67,10 @@ fun HeaderContent() {
             alignment = Alignment.TopCenter
         )
     }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun HeaderContentPreview() {
+    HeaderContent()
 }

@@ -21,8 +21,10 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.elhady.tomandjerry.R
+import com.elhady.tomandjerry.screens.episodes.SecretEpisodesScreen
 
 @Composable
 fun ScreenHeader() {
@@ -34,7 +36,7 @@ fun ScreenHeader() {
         verticalAlignment = Alignment.CenterVertically
     ) {
         Image(
-            painter = painterResource(id = R.drawable.profile_image2),
+            painter = painterResource(id = R.drawable.profile_image),
             contentDescription = "App Logo",
             modifier = Modifier
                 .size(40.dp)
@@ -66,4 +68,10 @@ fun ScreenHeader() {
             )
         }
     }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun ScreenHeaderPreview() {
+    ScreenHeader()
 }
