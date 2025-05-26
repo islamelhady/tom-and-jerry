@@ -38,6 +38,7 @@ fun ElectricTomPasta() {
             ) {
             Text(
                 text = "Electric Tom pasta",
+                color = Color(color = 0xFF1F1F1E),
                 fontSize = 24.sp,
                 fontWeight = FontWeight.Bold,
                 modifier = Modifier.weight(1f)
