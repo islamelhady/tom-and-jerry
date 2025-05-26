@@ -1,4 +1,4 @@
-package com.elhady.tomandjerry.account
+package com.elhady.tomandjerry.screens.account.components
 
 import androidx.annotation.DrawableRes
 import androidx.compose.foundation.Image
