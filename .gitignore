@@ -1,15 +1,35 @@
+gitignore
+# IDE files (Android Studio)
+.gradle/
+.idea/
 *.iml
-.gradle
-/local.properties
-/.idea/caches
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
-.DS_Store
-/build
-/captures
-.externalNativeBuild
-.cxx
 local.properties
+
+# Build artifacts
+build/
+captures/
+*.apk
+*.aab
+*.ap_
+
+# Keystore files (NEVER commit these!)
+*.jks
+*.keystore
+
+# Log files
+*.log
+
+# Temp files
+*.tmp
+
+# Local configuration files (e.g., for specific environment variables not for all users)
+# Example: secrets.properties
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Other common ignores
+.cxx/
+*.swp
+*~
