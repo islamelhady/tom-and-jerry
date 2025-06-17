@@ -30,7 +30,8 @@ import com.elhady.tomandjerry.R
 
 val ibmPlexSansArabic = FontFamily(
     Font(R.font.ibm_plex_sans_arabic_regular, FontWeight.Normal),
-    Font(R.font.ibm_plex_sans_arabic_medium, FontWeight.Medium)
+    Font(R.font.ibm_plex_sans_arabic_medium, FontWeight.Medium),
+    Font(R.font.ibm_plex_sans_arabic_semi_bold, FontWeight.SemiBold),
 )
 
 @Composable

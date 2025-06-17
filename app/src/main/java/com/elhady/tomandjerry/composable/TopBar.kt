@@ -58,7 +58,7 @@ fun TopBar() {
             Font(R.font.ibm_plex_sans_arabic_medium, FontWeight.Medium)
         )
         Image(
-            painter = painterResource(id = R.drawable.profile_image_2),
+            painter = painterResource(id = R.drawable.profile_image),
             contentDescription = "Profile Image",
             contentScale = ContentScale.Crop,
             modifier = Modifier
