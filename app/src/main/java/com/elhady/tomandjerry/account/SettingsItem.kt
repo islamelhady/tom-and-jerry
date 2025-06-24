@@ -4,7 +4,6 @@ import androidx.annotation.DrawableRes
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -19,13 +18,13 @@ import com.elhady.tomandjerry.composable.ibmPlexSansArabic
 import com.elhady.tomandjerry.ui.theme.TextColor
 
 @Composable
-fun SettingsItemRow(
+fun SettingsItem(
+    modifier: Modifier = Modifier,
     text: String,
     @DrawableRes icon: Int
 ) {
     Row(
-        modifier = Modifier
-            .fillMaxWidth(),
+        modifier = modifier,
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy(8.dp)
     ) {
@@ -49,7 +48,7 @@ fun SettingsItemRow(
 @Preview(showBackground = true)
 @Composable
 fun SettingsItemRowPreview() {
-    SettingsItemRow(
+    SettingsItem(
         icon = R.drawable.settings_meo,
         text = "Change sleeping place"
     )
