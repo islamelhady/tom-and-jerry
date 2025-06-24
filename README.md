@@ -3,7 +3,7 @@ A simple project built with **Jetpack Compose** featuring user interfaces inspir
 > **Note:** This is a **UI-only** project, designed to showcase layout skills and component distribution in Compose.
 
 ## 🎨 Design
-[View on Figma](https://www.figma.com/design/SCAkxpDVKqBNgmOanshkT5/Tom-And-Jerry--Copy-?node-id=0-1&p=f&t=W6C6aN73PSNLELje-0)
+[View on Figma](https://www.figma.com/design/SCAkxpDVKqBNgmOanshkT5/Tom-And-Jerry?node-id=8-605&t=Ba2E2GgQ34IhMX5s-0)
 
 ## 📱 Screens
 | Account Screen | Episodes Screen |
