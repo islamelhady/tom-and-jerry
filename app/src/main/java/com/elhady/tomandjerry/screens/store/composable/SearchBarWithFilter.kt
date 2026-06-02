@@ -1,4 +1,4 @@
-package com.elhady.tomandjerry.composable
+package com.elhady.tomandjerry.screens.store.composable
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable

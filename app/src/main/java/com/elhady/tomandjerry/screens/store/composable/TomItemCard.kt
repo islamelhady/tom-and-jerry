@@ -1,4 +1,4 @@
-package com.elhady.tomandjerry.composable
+package com.elhady.tomandjerry.screens.store.composable
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image

@@ -1,4 +1,4 @@
-package com.elhady.tomandjerry.composable
+package com.elhady.tomandjerry.screens.store.composable
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.PaddingValues
