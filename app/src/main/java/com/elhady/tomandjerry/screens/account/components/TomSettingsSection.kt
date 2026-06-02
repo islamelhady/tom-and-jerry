@@ -15,23 +15,17 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.elhady.tomandjerry.R
 import com.elhady.tomandjerry.composable.ibmPlexSansArabic
-import com.elhady.tomandjerry.data.SettingItem
 
 @Composable
 fun TomSettingsSection() {
-    val settingsItems = listOf(
-        SettingItem(Icons.Default.Info, "Change sleeping place"),
-        SettingItem(Icons.Default.Face, "Meow settings"), // Assuming a generic icon
-        SettingItem(Icons.Default.Lock, "Password to open the fridge")
-    )
-
     Column(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(horizontal = 16.dp)
     ) {
         Text(
             text = "Tom settings",
@@ -44,9 +38,24 @@ fun TomSettingsSection() {
         Spacer(modifier = Modifier.height(12.dp))
 
         Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
-            settingsItems.forEach { item ->
-                SettingsItemRow(item = item)
-            }
+            SettingsItem(
+                icon = R.drawable.settings_change_sleeping,
+                text = "Change sleeping place"
+            )
+            SettingsItem(
+                icon = R.drawable.settings_meo,
+                text = "Meow settings"
+            )
+            SettingsItem(
+                icon = R.drawable.settings_password,
+                text = "Password to open the fridge"
+            )
         }
     }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun TomSettingsSectionPreview(){
+    TomSettingsSection()
 }

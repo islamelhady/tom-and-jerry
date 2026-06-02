@@ -1,4 +1,4 @@
-package com.elhady.tomandjerry.account
+package com.elhady.tomandjerry.screens.account
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -25,8 +25,11 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.elhady.tomandjerry.R
+import com.elhady.tomandjerry.screens.account.components.SettingsItem
+import com.elhady.tomandjerry.screens.account.components.StatCard
 import com.elhady.tomandjerry.composable.ibmPlexSansArabic
-import com.elhady.tomandjerry.ui.theme.Pink80
+import com.elhady.tomandjerry.screens.account.components.FavoriteFoodsSection
+import com.elhady.tomandjerry.screens.account.components.TomSettingsSection
 import com.elhady.tomandjerry.ui.theme.TextColor
 import com.elhady.tomandjerry.ui.theme.TomAndJerryTheme
 
@@ -125,30 +128,7 @@ fun AccountScreen() {
                         backgroundColor = Color(0xFFFAEDCF)
                     )
                 }
-                Text(
-                    modifier = Modifier.padding(bottom = 8.dp),
-                    text = "Tom settings",
-                    color = TextColor,
-                    fontSize = 20.sp,
-                    fontFamily = ibmPlexSansArabic,
-                    fontWeight = FontWeight.Bold,
-                )
-
-                SettingsItem(
-                    modifier = Modifier.padding(bottom = 12.dp),
-                    icon = R.drawable.settings_change_sleeping,
-                    text = "Change sleeping place"
-                )
-                SettingsItem(
-                    modifier = Modifier.padding(bottom = 12.dp),
-                    icon = R.drawable.settings_meo,
-                    text = "Meow settings"
-                )
-                SettingsItem(
-                    modifier = Modifier.padding(bottom = 12.dp),
-                    icon = R.drawable.settings_password,
-                    text = "Password to open the fridge"
-                )
+                TomSettingsSection()
                 Spacer(
                     modifier = Modifier
                         .padding(12.dp)
@@ -156,30 +136,7 @@ fun AccountScreen() {
                         .height(1.dp)
                         .background(Color(0xFF1A1F14).copy(alpha = 0.08f))
                 )
-                Text(
-                    text = "His favorite foods",
-                    color = TextColor,
-                    fontSize = 20.sp,
-                    fontFamily = ibmPlexSansArabic,
-                    fontWeight = FontWeight.Bold,
-                    modifier = Modifier.padding(bottom = 8.dp),
-
-                    )
-                SettingsItem(
-                    modifier = Modifier.padding(bottom = 12.dp),
-                    icon = R.drawable.stolean_meal,
-                    text = "Mouses"
-                )
-                SettingsItem(
-                    modifier = Modifier.padding(bottom = 12.dp),
-                    icon = R.drawable.stolean_meal,
-                    text = "Last stolen meal"
-                )
-                SettingsItem(
-                    modifier = Modifier.padding(bottom = 12.dp),
-                    icon = R.drawable.sleep_mode,
-                    text = "Change sleep mood"
-                )
+                FavoriteFoodsSection()
             }
         }
     }
