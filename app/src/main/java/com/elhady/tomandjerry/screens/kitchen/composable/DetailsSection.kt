@@ -3,42 +3,61 @@ package com.elhady.tomandjerry.screens.kitchen.composable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.elhady.tomandjerry.R
-import com.elhady.tomandjerry.data.DetailItem
+import com.elhady.tomandjerry.composable.ibmPlexSansArabic
 
 @Composable
-fun DetailsSection() {
-    val details = listOf(
-        DetailItem(icon = R.drawable.ic_cart, "1000 V", "Temperature"),
-        DetailItem(icon = R.drawable.ic_cart, "3 sparks", "Time"),
-        DetailItem(icon = R.drawable.ic_cart, "1M 12K", "No. of deaths")
-    )
-    Column {
-        Text(text = "Details", fontSize = 20.sp, fontWeight = FontWeight.Bold)
-        Spacer(modifier = Modifier.height(16.dp))
+fun DetailsSection(
+    modifier: Modifier = Modifier
+) {
+    Column(
+        modifier = modifier.fillMaxWidth(),
+        verticalArrangement = Arrangement.spacedBy(8.dp)
+    ) {
+        Text(
+            text = "Details",
+            fontSize = 20.sp,
+            fontFamily = ibmPlexSansArabic,
+            fontWeight = FontWeight.Medium,
+            color = Color(0xFF1F1F1E)
+        )
         Row(
             modifier = Modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.spacedBy(12.dp)
+            horizontalArrangement = Arrangement.spacedBy(8.dp)
         ) {
-            details.forEach { item ->
-                DetailCard(item = item, modifier = Modifier.weight(1f))
-            }
+            DetailCard(
+                modifier = Modifier.weight(1f),
+                title = "1000 V",
+                description = "Temperature",
+                icon = R.drawable.temperature
+            )
+            DetailCard(
+                modifier = Modifier.weight(1f),
+                title = "3 sparks",
+                description = "Timer",
+                icon = R.drawable.timer
+            )
+            DetailCard(
+                modifier = modifier.weight(1f),
+                title = "1M 12K",
+                description = "No. of deaths",
+                icon = R.drawable.evil
+            )
         }
     }
 }
 
 @Preview(showBackground = true)
 @Composable
-fun DetailsSectionPreview(){
+fun DetailsSectionPreview() {
     DetailsSection()
 }

@@ -14,6 +14,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.elhady.tomandjerry.R
@@ -24,7 +25,7 @@ fun PopularCharactersSection() {
     val characters = listOf(
         CharacterInfo("Tom", "Failed stalker", R.drawable.tom, Color(0xFFFCF2C5)),
         CharacterInfo("Jerry", "A scammer mouse", R.drawable.jerry, Color(0xFFFCC5E4)),
-        CharacterInfo("Butch", "An opportunist cat", R.drawable.little_mouse, Color(0xFFC5E7FC))
+        CharacterInfo("Butch", "An opportunist cat", R.drawable.butch, Color(0xFFC5E7FC))
     )
     Column(
         modifier = Modifier
@@ -50,4 +51,10 @@ fun PopularCharactersSection() {
             }
         }
     }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun PopularCharactersSectionPreview() {
+    PopularCharactersSection()
 }
