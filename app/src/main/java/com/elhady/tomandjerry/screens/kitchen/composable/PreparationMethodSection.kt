@@ -2,7 +2,9 @@ package com.elhady.tomandjerry.screens.kitchen.composable
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -45,6 +47,7 @@ fun PreparationMethodSection(
             stepNumber = "4",
             details = "Serve with an insulating glove.",
         )
+        Spacer(modifier = Modifier.height(16.dp))
     }
 }
 

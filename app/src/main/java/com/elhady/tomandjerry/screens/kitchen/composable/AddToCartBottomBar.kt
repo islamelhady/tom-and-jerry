@@ -40,10 +40,18 @@ fun AddToCartBottomBar(onAddToCartClick: () -> Unit) {
             shape = RoundedCornerShape(12.dp),
             colors = ButtonDefaults.buttonColors(containerColor = Color(color = 0xFF03578A))
         ) {
-            Text(text = "Add to cart", fontSize = 16.sp)
+            Text(
+                text = "Add to cart",
+                color = Color.White,
+                fontSize = 16.sp
+            )
         }
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
-            Text(text = "3 cheeses", fontSize = 14.sp, fontWeight = FontWeight.Bold)
+            Text(
+                text = "3 cheeses",
+                fontSize = 14.sp,
+                color = Color(color = 0xFF03578A),
+                fontWeight = FontWeight.Bold)
             Text(
                 text = "5 cheeses",
                 fontSize = 12.sp,
